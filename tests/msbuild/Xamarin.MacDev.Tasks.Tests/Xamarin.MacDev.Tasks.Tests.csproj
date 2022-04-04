@@ -26,11 +26,18 @@
     <Reference Include="Microsoft.Build.Framework" HintPath="$(MSBuildBinPath)\Microsoft.Build.Framework.dll" />
     <Reference Include="Microsoft.Build.Tasks.Core" HintPath="$(MSBuildBinPath)\Microsoft.Build.Tasks.Core.dll" />
     <Reference Include="Microsoft.Build.Utilities.Core" HintPath="$(MSBuildBinPath)\Microsoft.Build.Utilities.Core.dll" />
+    <Reference Include="Xamarin.MacDev" HintPath="..\..\..\msbuild\Xamarin.iOS.Tasks\bin\$(Configuration)\netstandard2.0\Xamarin.MacDev.dll" />
+    <Reference Include="Xamarin.MacDev.Tasks.Core" HintPath="..\..\..\msbuild\Xamarin.iOS.Tasks\bin\$(Configuration)\netstandard2.0\Xamarin.MacDev.Tasks.Core.dll" />
+    <Reference Include="Xamarin.MacDev.Tasks" HintPath="..\..\..\msbuild\Xamarin.iOS.Tasks\bin\$(Configuration)\netstandard2.0\Xamarin.MacDev.Tasks.dll" />
+    <Reference Include="Xamarin.iOS.Tasks.Core" HintPath="..\..\..\msbuild\Xamarin.iOS.Tasks\bin\$(Configuration)\netstandard2.0\Xamarin.iOS.Tasks.Core.dll" />
     <Reference Include="Xamarin.iOS.Tasks" HintPath="..\..\..\msbuild\Xamarin.iOS.Tasks\bin\$(Configuration)\netstandard2.0\Xamarin.iOS.Tasks.dll" />
     <Reference Include="Xamarin.Localization.MSBuild" HintPath="..\..\..\msbuild\Xamarin.iOS.Tasks\bin\$(Configuration)\netstandard2.0\Xamarin.Localization.MSBuild.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit.ConsoleRunner" Version="3.11.1" />
     <PackageReference Include="NUnit.Extension.NUnitV2ResultWriter" Version="3.6.0" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.4" />
     <PackageReference Include="Microsoft.Build" Version="15.9.20" />
     <PackageReference Include="Microsoft.Build.Framework" Version="15.9.20" />
     <PackageReference Include="Microsoft.Build.Tasks.Core" Version="15.9.20" />

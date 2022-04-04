@@ -56,6 +56,10 @@
 
   <Import Project="$(MSBuildThisFileDirectory)..\ILMerge.targets" />
 
+  <PropertyGroup>
+      <ILRepack>false</ILRepack>
+  </PropertyGroup>
+
   <Target Name="BuildGeneratedVersionsFile" Inputs="../../Make.config.inc;../Makefile" Outputs="../Versions.ios.g.cs" BeforeTargets="BeforeBuild">
     <Exec Command="make -C .. Versions.ios.g.cs" />
   </Target>

@@ -13,8 +13,8 @@
     <PackageReference Include="System.IO.Abstractions" Version="6.0.27" />
     <PackageReference Include="Mono.Cecil" Version="0.11.4" />
     <PackageReference Include="GitInfo" Version="2.1.2" />
-    <!-- We only include build assets to get targets related to agent generation, the assemblies come from Xamarin.iOS.Tasks -->
-    <PackageReference Include="Xamarin.Messaging.Core" Version="$(MessagingVersion)" IncludeAssets="build" />
+    <PackageReference Include="Xamarin.Messaging.Core" Version="$(MessagingVersion)" />
+    <PackageReference Include="Xamarin.Messaging.Build.Common" Version="$(MessagingVersion)" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,16 +49,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- The iOS.Tasks assembly was ILRepacked to include MacDev.Tasks, if we use the references from the project we'get both and the types will collide -->
-    <!-- We still need the project reference to mantain the build order dependency, but we add a reference to the assembly explicitly -->
-    <ProjectReference Include="..\..\Xamarin.iOS.Tasks\Xamarin.iOS.Tasks.csproj">
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Xamarin.iOS.Tasks">
-      <HintPath>..\..\Xamarin.iOS.Tasks\bin\$(Configuration)\netstandard2.0\Xamarin.iOS.Tasks.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\Xamarin.iOS.Tasks\Xamarin.iOS.Tasks.csproj" />
   </ItemGroup>
 </Project>
